@@ -10,7 +10,13 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Text('this is the homepage'),
+        child: FlatButton.icon(
+          icon: Icon(Icons.edit_location),
+          label: Text('Edit location'),
+          onPressed: () {
+            Navigator.pushNamed(context, '/choose_location');
+          },
+        ),
       ),
     );
   }
